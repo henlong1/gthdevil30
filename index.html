@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gattahus & Baccarat Oracle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-wrapper">
+        <!-- 가따후 시스템 앱 -->
+        <div id="gattahus-app" class="app-container">
+            <div class="container">
+                <h1>가따후 시스템</h1>
+                <div class="game-info">
+                    <p>현재 레벨: <span id="currentLevel">3</span></p>
+                    <p>현재 단계: <span id="currentStage">1</span></p>
+                    <p>현재 베팅 유닛: <span id="currentBetUnit">3</span></p>
+                    <p>총 유닛: <span id="totalUnits">0</span></p>
+                    <p id="message" class="message"></p>
+                </div>
+                <div class="controls">
+                    <button id="winButton" class="button win">승리</button>
+                    <button id="loseButton" class="button lose">패배</button>
+                    <button id="resetButton" class="button reset">리셋</button>
+                    <button id="undoButton" class="button undo">이전 단계</button>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <p>본 시스템의 이용으로 발생하는 모든 결과에 대한 법적·재정적 책임은 이용자 본인에게 있으며, 운영자는 일체의 법적 책임을 지지 않습니다.</p>
+            </div>
+        </div>
+
+        <!-- 악마의 바카라 예언자 앱 -->
+        <div id="oracle-app" class="app-container">
+             <div class="oracle-container">
+                <h1 class="oracle-title">
+                    <span class="oracle-icon">🧿</span> 악마의 바카라 예언자
+                </h1>
+
+                <div class="oracle-controls-main">
+                  <button id="oracle-rollButton" class="oracle-button-predict">
+                    예언하기
+                  </button>
+                </div>
+
+                <div class="oracle-dice-display">
+                  <p class="oracle-dice-title">🎲 악마의 조언 코드:</p>
+                  <p id="oracle-dice" class="oracle-dice-numbers">아직 예언되지 않음</p>
+                </div>
+
+                <div id="oracle-result-display" class="oracle-result">
+                  <span class="oracle-icon-hand">👉</span> <span id="oracle-result-text"></span>
+                </div>
+
+                <div class="oracle-counts-grid">
+                  <div class="oracle-count-box total-count">
+                    <div class="oracle-count-label">총 예언 횟수:</div>
+                    <div id="oracle-count" class="oracle-count-value">0</div>
+                  </div>
+                  <div class="oracle-count-box summary-box">
+                    <div class="oracle-count-label">결과 요약:</div>
+                    <div class="oracle-summary-values">
+                      <span id="oracle-banker-summary">BANKER: 0 (0 연속)</span>
+                      <span id="oracle-player-summary">PLAYER: 0 (0 연속)</span>
+                      <span id="oracle-tie-summary">TIE: 0 (0 연속)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="oracle-controls-secondary">
+                  <button id="oracle-undoButton" class="oracle-button-secondary">
+                    전 단계로
+                  </button>
+                  <button id="oracle-resetButton" class="oracle-button-secondary">
+                    리셋
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

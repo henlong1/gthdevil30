@@ -1,0 +1,342 @@
+/* General Body Styles */
+body {
+    font-family: 'Noto Sans KR', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 컨테이너를 상단에 정렬 */
+    min-height: 100vh;
+    background-color: #111827; /* 어두운 배경 */
+    color: #ecf0f1;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* 화면이 작아지면 줄바꿈 */
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* 최대 너비 설정 */
+}
+
+.app-container {
+    flex: 1; /* 가용 공간을 균등하게 차지 */
+    min-width: 350px; /* 최소 너비 */
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- 가따후 시스템 스타일 --- */
+#gattahus-app .container {
+    background-color: #34495e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+#gattahus-app h1 {
+    color: #e67e22;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+#gattahus-app .game-info p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#gattahus-app .game-info span {
+    font-weight: bold;
+}
+
+#gattahus-app #currentBetUnit {
+    color: #e74c3c;
+    font-size: 2.4em;
+    font-weight: bold;
+}
+
+#gattahus-app #currentStage {
+    color: #3498db;
+}
+
+#gattahus-app #currentLevel, #gattahus-app #totalUnits {
+    color: #f1c40f;
+}
+
+#gattahus-app .message {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    min-height: 25px;
+    color: #e74c3c;
+}
+
+#gattahus-app .message.win {
+    color: #2ecc71;
+}
+
+#gattahus-app .message.lose {
+    color: #e74c3c;
+}
+
+#gattahus-app .controls {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+#gattahus-app .button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    flex: 1 1 auto;
+    min-width: 120px;
+}
+
+#gattahus-app .button.win {
+    background-color: #27ae60;
+    color: white;
+}
+
+#gattahus-app .button.win:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
+}
+
+#gattahus-app .button.lose {
+    background-color: #c0392b;
+    color: white;
+}
+
+#gattahus-app .button.lose:hover {
+    background-color: #e74c3c;
+    transform: translateY(-2px);
+}
+
+#gattahus-app .button.reset, #gattahus-app .button.undo {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+#gattahus-app .button.reset:hover, #gattahus-app .button.undo:hover {
+    background-color: #95a5a6;
+    transform: translateY(-2px);
+}
+
+#gattahus-app .button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#gattahus-app .disclaimer {
+    color: #bdc3c7;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* --- 악마의 바카라 예언자 스타일 --- */
+#oracle-app .oracle-container {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    padding: 24px;
+    text-align: center;
+    border: 4px solid #b91c1c;
+    width: 100%;
+    box-sizing: border-box;
+    color: #1f2937;
+    flex-grow: 1;
+}
+
+#oracle-app .oracle-title {
+    font-size: 2.25rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+    color: #b91c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#oracle-app .oracle-icon {
+    font-size: 3rem;
+}
+
+#oracle-app .oracle-controls-main {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+#oracle-app .oracle-button-predict {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 24px;
+    background-image: linear-gradient(to right, #dc2626, #b91c1c);
+    color: white;
+    font-weight: bold;
+    font-size: 1.125rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#oracle-app .oracle-button-predict:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+#oracle-app .oracle-dice-display {
+    border: 1px solid #d1d5db;
+    padding: 16px;
+    border-radius: 0.5rem;
+    color: #4b5563;
+    background-color: #f9fafb;
+    margin-bottom: 16px;
+    min-height: 3rem;
+    max-height: 6rem;
+    overflow-y: auto;
+    box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.06);
+}
+
+#oracle-app .oracle-dice-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #b91c1c;
+    margin: 0 0 4px 0;
+}
+
+#oracle-app .oracle-dice-numbers {
+    font-size: 1rem;
+    word-break: break-all;
+    color: #374151;
+    margin: 0;
+}
+
+#oracle-app .oracle-result {
+    font-size: 3.75rem;
+    font-weight: 900;
+    color: #111827;
+    margin-bottom: 24px;
+    min-height: 80px;
+}
+
+#oracle-app .oracle-icon-hand {
+    font-size: 4.5rem;
+}
+
+#oracle-app .oracle-counts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: #1f2937;
+}
+
+@media (min-width: 640px) {
+    #oracle-app .oracle-counts-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+#oracle-app .oracle-count-box {
+    padding: 12px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+}
+
+#oracle-app .total-count {
+    background-color: #e0f2fe;
+}
+
+#oracle-app .summary-box {
+    background-color: #f3f4f6;
+}
+
+#oracle-app .oracle-count-label {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+#oracle-app .oracle-count-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1d4ed8;
+}
+
+#oracle-app .oracle-summary-values {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+#oracle-app .oracle-summary-values span:nth-child(1) { color: #15803d; }
+#oracle-app .oracle-summary-values span:nth-child(2) { color: #7e22ce; }
+#oracle-app .oracle-summary-values span:nth-child(3) { color: #ca8a04; }
+
+
+#oracle-app .oracle-controls-secondary {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+#oracle-app .oracle-button-secondary {
+    flex: 1;
+    padding: 12px 24px;
+    font-weight: bold;
+    font-size: 1.125rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#oracle-app .oracle-button-secondary:nth-child(1) {
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    background-color: white;
+}
+#oracle-app .oracle-button-secondary:nth-child(1):hover {
+    background-color: #eff6ff;
+    transform: scale(1.05);
+}
+
+#oracle-app .oracle-button-secondary:nth-child(2) {
+    border: 2px solid #dc2626;
+    color: #dc2626;
+    background-color: white;
+}
+#oracle-app .oracle-button-secondary:nth-child(2):hover {
+    background-color: #fee2e2;
+    transform: scale(1.05);
+}
+
+#oracle-app .oracle-button-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    background-color: #f3f4f6;
+}
